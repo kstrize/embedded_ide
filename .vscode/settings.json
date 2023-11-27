@@ -1,0 +1,24 @@
+{
+    // Embedded board IP address
+    "TARGET_IP": "192.168.100.50",
+    // GDB server port
+    "DEBUG_PORT": "24",
+    // Yocto enviroment script that needs to be sourced
+    "YOCTO_ENV": "${workspaceFolder}/poky/oe-init-build-env",
+    // Yocto build direcotry
+    "YOCTO_BUILD_DIR": "${workspaceFolder}/build",
+    // Source directory of the devtool workspace
+    "WORKSPACE_SRC_DIR": "${workspaceFolder}/build/workspace/sources",
+    // SDK enviroment script that needs to be sourced
+    "SDK_ENV": "path/to/sdk/enviroment",
+    // Application cross compile build command
+    "APP_BUILD_CMD": "make -j$(nproc)",
+    // Location of the application binary file
+    "APP_BIN_DIR": "${workspaceFolder}/path/to/app/bin",
+    // Name of the application binary file
+    "APP_BIN_NAME": "hello_world.bin",
+    // Embeded board Linux user name
+    "TARGET_USER": "root",
+    // Location of the applicaton on the embedded board
+    "TARGET_APP_BIN_DIR": "~"
+}
