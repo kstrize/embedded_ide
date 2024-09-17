@@ -5,14 +5,47 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "App remote GDB",
             "type": "gdb",
             "request": "attach",
-            "name": "App remote GDB",
             "gdbpath": "/usr/bin/gdb-multiarch",
+            "cwd": "${workspaceRoot}",
             "executable": "${config:APP_BIN_DIR}",
             "target": "${config:TARGET_IP}:${config:DEBUG_PORT}",
-            "cwd": "${workspaceRoot}",
             "remote": true
-        }
+        },
+        {
+            "name": "BMP attach",
+            "type": "cortex-debug",
+            "request": "attach",
+            "servertype": "bmp",
+            "interface": "swd", // or jtag
+            "device": "${config:BMP_TARGET_DEVICE}",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "cwd": "${workspaceRoot}",
+            "executable": "BMP_TARGET_ELF",
+            "BMPGDBSerialPort": "${config:BMP_SERIAL}"
+        },
+        {
+            "name": "Linux kernel GDB",
+            "preLaunchTask": "SDK source",
+            "type": "gdb",
+            "request": "attach",
+            "remote": true,
+            "gdbpath": "/usr/bin/gdb-multiarch",
+            "target": "localhost:3333",
+            "cwd": "${config:KERNEL_SRC}",
+            "executable": "${config:KERNEL_VMLINUX}"
+        },
+        {
+            "name": "u-boot GDB",
+            "type": "gdb",
+            "request": "attach",
+            "remote": true,
+            "gdbpath": "/usr/bin/gdb-multiarch",
+            "target": "localhost:3333",
+            "cwd": "${config:U_BOOT_SRC}",
+            "executable": "${config:U_BOOT_BIN}"
+        },
     ]
 }

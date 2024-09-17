@@ -20,5 +20,15 @@
     // Embeded board Linux user name
     "TARGET_USER": "root",
     // Location of the applicaton on the embedded board
-    "TARGET_APP_BIN_DIR": "~"
+    "TARGET_APP_BIN_DIR": "~",
+
+    "BMP_TARGET_DEVICE": "STM32F103",
+    "BMP_TARGET_ELF": "${workspaceFolder}/path/to/elf",
+    "BMP_SERIAL": "/dev/ttyACM0",
+
+    "KERNEL_SRC": "${workspaceFolder}/path/to/kernel/src",
+    "KERNEL_VMLINUX": "${workspaceFolder}/path/to/vmlinux",
+
+    "U_BOOT_SRC": "${workspaceFolder}/path/to/u-boot/src",
+    "U_BOOT_BIN": "${workspaceFolder}/path/to/u-boot/bin"
 }

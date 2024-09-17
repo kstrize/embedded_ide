@@ -31,6 +31,12 @@
             "command": "scp ${config:APP_BIN_DIR}/${config:APP_BIN_NAME} ${config:TARGET_USER}@${config:TARGET_IP}:${config:TARGET_APP_BIN_DIR}/${config:APP_BIN_NAME}",
             "problemMatcher": [],
         },
+        {
+            "label": "SDK source",
+            "type": "shell",
+            "command": "source ${config:SDK_ENV}",
+            "problemMatcher": [],
+        },
     ],
     "inputs": [
         {

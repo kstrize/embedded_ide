@@ -1,0 +1,3 @@
+progress==1.6
+pyserial==3.5
+stm32loader==0.7.1

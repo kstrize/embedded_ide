@@ -1,0 +1,3 @@
+# Ignore python virtual enviroment called bmp_env
+# Use requirements.txt to install all the packeges that are included in bmp_env
+/debugger/bmp_env/

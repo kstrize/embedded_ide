@@ -1,0 +1,12 @@
+[submodule "debugger/blackmagic"]
+	path = debugger/blackmagic
+	url = https://github.com/blackmagic-debug/blackmagic
+[submodule "Bear"]
+	path = Bear
+	url = https://github.com/rizsotto/Bear.git
+[submodule "debugger/libusb"]
+	path = debugger/libusb
+	url = https://github.com/libusb/libusb.git
+[submodule "debugger/openocd"]
+	path = debugger/openocd
+	url = https://github.com/openocd-org/openocd.git
