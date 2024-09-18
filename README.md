@@ -2,6 +2,8 @@
 
 ![Linux kernel indexing](./res/linux_kernel_indexing.gif)
 
+![Linux Kernel Debugging](./res/linux_kernel_debugging.png)
+
 This 100% open source embedded IDE setup supports:
 - Yocto projects (Linux kernel, u-boot, arm-trusted-firmware...) full indexation and autocompletion
 - Linux kernel full indexation and autocompletion
