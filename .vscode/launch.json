@@ -10,8 +10,8 @@
             "request": "attach",
             "gdbpath": "/usr/bin/gdb-multiarch",
             "cwd": "${workspaceRoot}",
-            "executable": "${config:APP_BIN_DIR}",
-            "target": "${config:TARGET_IP}:${config:DEBUG_PORT}",
+            "executable": "${config:EMBEDDED_IDE.APP_BIN_DIR}",
+            "target": "${config:EMBEDDED_IDE.TARGET_IP}:${config:EMBEDDED_IDE.DEBUG_PORT}",
             "remote": true
         },
         {
@@ -20,11 +20,11 @@
             "request": "attach",
             "servertype": "bmp",
             "interface": "swd", // or jtag
-            "device": "${config:BMP_TARGET_DEVICE}",
+            "device": "${config:EMBEDDED_IDE.BMP_TARGET_DEVICE}",
             "gdbPath": "/usr/bin/gdb-multiarch",
             "cwd": "${workspaceRoot}",
             "executable": "BMP_TARGET_ELF",
-            "BMPGDBSerialPort": "${config:BMP_SERIAL}"
+            "BMPGDBSerialPort": "${config:EMBEDDED_IDE.BMP_SERIAL}"
         },
         {
             "name": "Linux kernel GDB",
@@ -34,8 +34,8 @@
             "remote": true,
             "gdbpath": "/usr/bin/gdb-multiarch",
             "target": "localhost:3333",
-            "cwd": "${config:KERNEL_SRC}",
-            "executable": "${config:KERNEL_VMLINUX}"
+            "cwd": "${config:EMBEDDED_IDE.KERNEL_SRC}",
+            "executable": "${config:EMBEDDED_IDE.KERNEL_VMLINUX}"
         },
         {
             "name": "u-boot GDB",
@@ -44,8 +44,8 @@
             "remote": true,
             "gdbpath": "/usr/bin/gdb-multiarch",
             "target": "localhost:3333",
-            "cwd": "${config:U_BOOT_SRC}",
-            "executable": "${config:U_BOOT_BIN}"
+            "cwd": "${config:EMBEDDED_IDE.U_BOOT_SRC}",
+            "executable": "${config:EMBEDDED_IDE.U_BOOT_BIN}"
         },
     ]
 }

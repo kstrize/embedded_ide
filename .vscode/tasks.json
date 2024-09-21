@@ -6,7 +6,7 @@
         {
             "label": "Build and index",
             "type": "shell",
-            "command": "source ${config:YOCTO_ENV} ${config:YOCTO_BUILD_DIR} && devtool modify ${input:recepie} && cd ${config:WORKSPACE_SRC_DIR}/${input:recepie} && bear devtool build ${input:recepie}",
+            "command": "source ${config:EMBEDDED_IDE.YOCTO_ENV} ${config:EMBEDDED_IDE.YOCTO_BUILD_DIR} && devtool modify ${input:recepie} && cd ${config:EMBEDDED_IDE.WORKSPACE_SRC_DIR}/${input:recepie} && bear devtool build ${input:recepie}",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
@@ -16,25 +16,25 @@
         {
             "label": "devtool reset",
             "type": "shell",
-            "command": "source ${config:YOCTO_ENV} ${config:YOCTO_BUILD_DIR} && devtool reset ${input:recepie}",
+            "command": "source ${config:EMBEDDED_IDE.YOCTO_ENV} ${config:EMBEDDED_IDE.YOCTO_BUILD_DIR} && devtool reset ${input:recepie}",
             "problemMatcher": [],
         },
         {
             "label": "SDK cross compile",
             "type": "shell",
-            "command": "source ${config:SDK_ENV} && ${config:APP_BUILD_CMD}",
+            "command": "source ${config:EMBEDDED_IDE.SDK_ENV} && ${config:EMBEDDED_IDE.APP_BUILD_CMD}",
             "problemMatcher": [],
         },
         {
             "label": "Deploy App",
             "type": "shell",
-            "command": "scp ${config:APP_BIN_DIR}/${config:APP_BIN_NAME} ${config:TARGET_USER}@${config:TARGET_IP}:${config:TARGET_APP_BIN_DIR}/${config:APP_BIN_NAME}",
+            "command": "scp ${config:EMBEDDED_IDE.APP_BIN_DIR}/${config:EMBEDDED_IDE.APP_BIN_NAME} ${config:EMBEDDED_IDE.TARGET_USER}@${config:EMBEDDED_IDE.TARGET_IP}:${config:EMBEDDED_IDE.TARGET_APP_BIN_DIR}/${config:EMBEDDED_IDE.APP_BIN_NAME}",
             "problemMatcher": [],
         },
         {
             "label": "SDK source",
             "type": "shell",
-            "command": "source ${config:SDK_ENV}",
+            "command": "source ${config:EMBEDDED_IDE.SDK_ENV}",
             "problemMatcher": [],
         },
     ],

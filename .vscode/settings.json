@@ -1,34 +1,43 @@
 {
-    // Embedded board IP address
-    "TARGET_IP": "192.168.100.50",
-    // GDB server port
-    "DEBUG_PORT": "24",
-    // Yocto enviroment script that needs to be sourced
-    "YOCTO_ENV": "${workspaceFolder}/poky/oe-init-build-env",
-    // Yocto build direcotry
-    "YOCTO_BUILD_DIR": "${workspaceFolder}/build",
-    // Source directory of the devtool workspace
-    "WORKSPACE_SRC_DIR": "${workspaceFolder}/build/workspace/sources",
-    // SDK enviroment script that needs to be sourced
-    "SDK_ENV": "path/to/sdk/enviroment",
-    // Application cross compile build command
-    "APP_BUILD_CMD": "make -j$(nproc)",
-    // Location of the application binary file
-    "APP_BIN_DIR": "${workspaceFolder}/path/to/app/bin",
-    // Name of the application binary file
-    "APP_BIN_NAME": "hello_world.bin",
-    // Embeded board Linux user name
-    "TARGET_USER": "root",
-    // Location of the applicaton on the embedded board
-    "TARGET_APP_BIN_DIR": "~",
+    "EMBEDDED_IDE": {
+        // Embedded board IP address
+        "TARGET_IP": "192.168.100.50",
+        // GDB server port
+        "DEBUG_PORT": "24",
+        // Path to Yocto enviroment script that needs to be sourced
+        "YOCTO_ENV": "${workspaceFolder}/poky/oe-init-build-env",
+        // Path to Yocto build direcotry
+        "YOCTO_BUILD_DIR": "${workspaceFolder}/build",
+        // Path to source directory of the devtool workspace
+        "WORKSPACE_SRC_DIR": "${workspaceFolder}/build/workspace/sources",
+        // Path to SDK enviroment script that needs to be sourced
+        "SDK_ENV": "path/to/sdk/enviroment",
+        // Application cross compile build command
+        "APP_BUILD_CMD": "make -j$(nproc)",
+        // Path to the application binary file
+        "APP_BIN_DIR": "${workspaceFolder}/path/to/app/bin",
+        // Name of the application binary file
+        "APP_BIN_NAME": "hello_world.bin",
+        // Embeded board Linux user name
+        "TARGET_USER": "root",
+        // Location of the applicaton on the embedded board
+        "TARGET_APP_BIN_DIR": "~",
 
-    "BMP_TARGET_DEVICE": "STM32F103",
-    "BMP_TARGET_ELF": "${workspaceFolder}/path/to/elf",
-    "BMP_SERIAL": "/dev/ttyACM0",
+        // Target device
+        "BMP_TARGET_DEVICE": "STM32F103",
+        // Pah to target ELF file
+        "BMP_TARGET_ELF": "${workspaceFolder}/path/to/elf",
+        // Black Magic Probe serial connection
+        "BMP_SERIAL": "/dev/ttyACM0",
 
-    "KERNEL_SRC": "${workspaceFolder}/path/to/kernel/src",
-    "KERNEL_VMLINUX": "${workspaceFolder}/path/to/vmlinux",
+        // Path to Linux kernel source
+        "KERNEL_SRC": "${workspaceFolder}/path/to/kernel/src",
+        // Path to vmlinux file
+        "KERNEL_VMLINUX": "${workspaceFolder}/path/to/vmlinux",
 
-    "U_BOOT_SRC": "${workspaceFolder}/path/to/u-boot/src",
-    "U_BOOT_BIN": "${workspaceFolder}/path/to/u-boot/bin"
+        // Path to u-boot source
+        "U_BOOT_SRC": "${workspaceFolder}/path/to/u-boot/src",
+        // Path to u-boot binary
+        "U_BOOT_BIN": "${workspaceFolder}/path/to/u-boot/bin"
+    }
 }
