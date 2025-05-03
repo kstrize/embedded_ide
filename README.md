@@ -457,7 +457,7 @@ vim product.json
 ```
 ```json
 {
-    "updateUrl": "https://vscodium.now.sh",
+    "updateUrl": "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master",
     "downloadUrl": "https://github.com/VSCodium/vscodium/releases"
 }
 ```
